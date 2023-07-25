@@ -34,7 +34,7 @@ class _CheckinPageState extends State<CheckinPage> {
           padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           onPressed: () async {},
           child: Text(
-            "Register",
+            "Daftar Peserta",
             style: TextStyle(
                 color: Theme.of(context).primaryColorLight,
                 fontWeight: FontWeight.bold,
@@ -49,7 +49,6 @@ class _CheckinPageState extends State<CheckinPage> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white70.withOpacity(0.9),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         shadowColor: Colors.transparent,
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -113,7 +112,7 @@ class _CheckinPageState extends State<CheckinPage> {
                       padding: const EdgeInsets.all(30),
                       child: Column(
                         children: [
-                          const Text("No Registrasi"),
+                          const Text("Nama Peserta"),
                           const SizedBox(height: 10),
                           TextFormField(
                             autofocus: false,
@@ -124,13 +123,16 @@ class _CheckinPageState extends State<CheckinPage> {
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(32))),
                           ),
+                          const SizedBox(
+                            height: 100,
+                          ),
                           Container(
-                            height: 60,
-                            width: 60,
+                            height: 100,
+                            width: 100,
                             decoration: const BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(60)),
-                                color: Color.fromARGB(255, 255, 74, 74)),
+                                color: Color.fromARGB(255, 247, 26, 26)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: const <Widget>[
@@ -141,8 +143,10 @@ class _CheckinPageState extends State<CheckinPage> {
                                 //       size: 30,
                                 //     )),
                                 Text(
-                                  "Check",
-                                  style: TextStyle(fontWeight: FontWeight.w500),
+                                  "Check In",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 20),
                                 )
                               ],
                             ),

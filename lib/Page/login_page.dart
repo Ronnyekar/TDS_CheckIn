@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:tds_check_in/Page/checkin_page.dart';
+import 'package:tds_check_in/Page/home_page.dart';
 import '../constant.dart';
 
 Color firstcolor = const Color.fromARGB(255, 31, 56, 245);
@@ -88,16 +89,16 @@ class _LoginPageState extends State<LoginPage> {
           minWidth: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           onPressed: () async {
-            if (_formKey.currentState!.validate()) {
-              Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                    builder: (context) => const CheckinPage(),
-                  ));
-            } else {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text("Masukkan Input")));
-            }
+            // if (_formKey.currentState!.validate()) {
+            Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => const HomePage(),
+                ));
+            // } else {
+            //   ScaffoldMessenger.of(context).showSnackBar(
+            //       const SnackBar(content: Text("Masukkan Input")));
+            // }
 
             // Navigator.push(
             //     context,
